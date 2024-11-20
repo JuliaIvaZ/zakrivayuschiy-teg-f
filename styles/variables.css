@@ -2,7 +2,7 @@
 ширины устройства */
 
 :root {
-    --font-general: 'Inter', sans-serif;
+    --font-general: 'Inter';
     --font-accent: 'Press Start 2P', sans-serif;
     --font-weight-text: 400;
     --font-weight-title: 700;

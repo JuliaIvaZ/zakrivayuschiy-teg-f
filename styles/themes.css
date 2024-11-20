@@ -6,8 +6,8 @@
 */
 
 :root.theme-dark {
-    --font-weight-text: 'wdth' 465;
-    --font-weight-title: 'wdth' 785;
+    --font-weight-text: 465;
+    --font-weight-title: 785;
     --background-color: #000;
     --accent-color: #00cc14;
     --gradient-lines-color: #000;
@@ -16,8 +16,8 @@
 }
 
 :root.theme-light {
-    --font-weight-text: 'wdth' 400;
-    --font-weight-title: 'wdth' 700;
+    --font-weight-text: 400;
+    --font-weight-title: 700;
     --background-color: #fff;
     --accent-color: #000;
     --gradient-lines-color: #d3d3d3;
