@@ -1,1 +1,15 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от 
+ширины устройства */
+
+:root {
+    --font-general: 'Inter', sans-serif;
+    --font-accent: 'Press Start 2P', sans-serif;
+    --font-weight-text: 400;
+    --font-weight-title: 700;
+    --font-size-general: 18px;
+    --background-color: #fff;
+    --accent-color: #000;
+    --gradient-lines-color: #d3d3d3;
+    --gradient-top-color: #e7e7e7;
+    --gradient-bottom-color: #1a1a1a;
+}
