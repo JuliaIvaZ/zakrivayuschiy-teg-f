@@ -10,6 +10,7 @@
     --font-weight-title: 785;
     --background-color: #000;
     --accent-color: #00cc14;
+    --button-accent-color: #00cc14;
     --gradient-lines-color: #000;
     --gradient-top-color: #007f0c;
     --gradient-bottom-color: #004306;
@@ -20,6 +21,7 @@
     --font-weight-title: 700;
     --background-color: #fff;
     --accent-color: #000;
+    --button-accent-color: #fff;
     --gradient-lines-color: #d3d3d3;
     --gradient-top-color: #e7e7e7;
     --gradient-bottom-color: #1a1a1a;
