@@ -12,3 +12,39 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+
+@keyframes arrow {
+    0% {
+      left: -56px;
+    }
+    100% {
+      left: -52px;
+    }
+  }
+
+  @supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+    .label {
+        -webkit-text-stroke: 1px var(--background-color);
+        text-stroke: 1px var(--background-color);
+        text-shadow: none;
+    }
+  }
+
+  @keyframes active-heart {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+  
+  @keyframes active-sparks {
+    from {
+      fill: none;
+    }
+    to {
+      fill: var(--heart-body-color);
+    }
+  }
