@@ -17,7 +17,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-general), sans-serif;
-  font-variation-settings: 'wght' var(--font-weight-text), 'wght' var(--font-weight-title); 
+  font-variation-settings: 'wght' var(--font-weight-text); 
   background-color: var(--background-color);
   color: var(--accent-color);
   background-image: 
@@ -129,8 +129,15 @@
   animation: arrow 0.5s ease-in-out infinite alternate;
 }
 
+.main {
+  width: clamp(23.438rem, 100vw, 43.75rem);
+  display: grid;
+  justify-items: center;
+}
+
 .cards {
-  width: clamp(23.188rem, 99.43vw, 43.5rem);
+  /*width: clamp(23.188rem, 99.43vw, 43.5rem);*/
+  width: clamp(23.438rem, 100vw, 43.75rem);
   display: grid;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
@@ -143,12 +150,15 @@
 }
 
 .card__title {
+  width: clamp(23.188rem, calc(100vw - 4px), 43.5rem);
   font-weight: var(--font-weight-title);
   line-height: 21.78px;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 15px 2px 10px;
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .card__label {
+  height: clamp(23.188rem, calc(100vw - 4px), 43.5rem);
   aspect-ratio: 1 / 1;
   position: relative;
 }
@@ -158,9 +168,9 @@
 }
 
 .card__image {
-  width: clamp(22.938rem, 98.86vw, 43.25rem);
-  border-bottom: 2px solid var(--accent-color);
-  border-top: 2px solid var(--accent-color);
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
 }
 
 .label {
@@ -177,6 +187,14 @@
    0 1px var(--background-color), 
    1px 0 var(--background-color), 
    0 -1px var(--background-color);
+}
+
+@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+  .label {
+      -webkit-text-stroke: 1px var(--background-color);
+      text-stroke: 1px var(--background-color);
+      text-shadow: none;
+  }
 }
 
 .bright__image {
@@ -208,11 +226,13 @@
 }
 
 .card__text {
+  width: clamp(23.188rem, calc(100vw - 4px), 43.5rem);
   font-weight: var(--font-weight-text);
   line-height: 21px;
   padding: 28px 25px 0;
   display: grid;
   gap: 27px;
+  border-top: 2px solid var(--accent-color);
 }
 
 .buttons {
@@ -251,9 +271,7 @@
 
 .heart-core {
   fill: var(--background-color);
-  transition: fill 0.3s 0.03s linear; /*Почему переопределяем 
-  дефолтную функцию перехода на линейную, если в задании сказано использовать ease?
-  Или я неправильно понимаю, что нужно сделать и как будет лучше?*/
+  transition: fill 0.3s 0.03s linear; /*Спасибо за комментарии!*/
 }
 
 .like-icon:hover .heart-core {
@@ -275,21 +293,23 @@
   transition: fill 0.3s 0.06s linear;
 }
 
+.like-icon.is-liked .heart-core,
 .like-icon:active .heart-core {
   fill: var(--heart-body-color);
   transition: fill 0.3s linear;
 }
 
+.like-icon.is-liked .heart-body,
 .like-icon:active .heart-body {
   fill: var(--heart-body-color);
   transition: fill 0.3s 0.05s linear;
 }
 
-.like-icon.is-liked .heart-core,
-.like-icon.is-liked .heart-body {
+/*
+ {
   fill: var(--heart-body-color);
   transition: fill 0.3s linear;
-}
+}*/
 
 .like-icon.is-liked .heart-outline {
   fill: var(--heart-body-color);
@@ -310,6 +330,7 @@
   font-family: var(--font-accent), sans-serif, fantasy;
   cursor: pointer;
   position: relative;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__like-button {
@@ -360,7 +381,7 @@ button:focus {
   height: 57px;
   white-space: nowrap;
   margin-bottom: 105px;
-  margin-left: clamp(2.156rem, 26.14vw, 11.375rem);
+  /*margin-left: clamp(2.156rem, 26.14vw, 11.375rem);*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,7 +440,7 @@ dialog .floppy-icon {
 
 @media (width <= 375px) {
   .header__title {
-    padding-top: 95px;
+    padding-top: 120px;
   }
 
   .header__subtitle {

@@ -23,14 +23,6 @@
     }
   }
 
-  @supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
-    .label {
-        -webkit-text-stroke: 1px var(--background-color);
-        text-stroke: 1px var(--background-color);
-        text-shadow: none;
-    }
-  }
-
   @keyframes active-heart {
     from {
       transform: scale(1);
