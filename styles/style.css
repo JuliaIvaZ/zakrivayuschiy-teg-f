@@ -151,9 +151,9 @@
 
 .card__title {
   width: clamp(23.188rem, calc(100vw - 4px), 43.5rem);
-  font-weight: var(--font-weight-title);
+  font-variation-settings: 'wght' var(--font-weight-title);
   line-height: 21.78px;
-  padding: 5px 15px 2px 10px;
+  padding: 5px 10px 2px 10px;
   border-bottom: 2px solid var(--accent-color);
 }
 
